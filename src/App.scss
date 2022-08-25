@@ -1,26 +1,41 @@
 @import "styles/base";
 
+html {
+    margin: 0;
+}
 .app {
-  .app-content{
-    margin: 25px;
-  }
-  p{
-    color: $text-color;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  h4{
-    color: $dark-green-color;
-    font-weight: 700;
-  }
-  img {
-    max-width: 800px;
-    border: 1px solid $dark-green-color;
-    margin-bottom: 15px;
-  }
-  .app-header-logo{
-    max-height: 80px;
-    border: none;
-  }
-
+    .wizard {
+        flex-wrap: wrap;
+        border: 0.2rem solid black;
+        border-radius: 1rem;
+        padding: 7%;
+        width: 100%;
+        height: 37rem;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .test {
+        flex-wrap: wrap;
+        position: absolute;
+        left: 30rem;
+        top: 10rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block;
+    }
+    .logo {
+        flex-wrap: wrap;
+        position: absolute;
+        right: 30rem;
+        top: 10rem;
+        width: 7rem;
+        height: 4rem;
+        display: block;
+    }
 }
