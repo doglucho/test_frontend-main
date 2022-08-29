@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import './App.scss';
+import image from './assets/img/Logotipo-Vertical-Verde-Alta.png'
 import SignUpInfo from "./SignUpInfo";
 import SuccessfulRegistration from "./SuccessfulRegistration";
 
@@ -13,7 +15,7 @@ function Form() {
         hint: "",
     })
 
-    const FormTitles = ['Sign Up']
+    const FormTitles = ["Sign Up", "Successful Registration"]
 
     const PageDisplay = () => {
         if(page === 0) {
@@ -30,7 +32,12 @@ function Form() {
             <div className="header">
                 <h1>{FormTitles[page]}</h1>
             </div>
-            <div className="body">{PageDisplay()}</div>
+            <div className="body">{PageDisplay()}
+                <p className='test' />Whell Hub Test Frontend =S
+                    <img className="logo" src={ image } alt="logo"/>
+                    <input className="checkbox" type="checkbox" name="privacy"/>
+                    Para continuar, acepta los términos y condiciones con respecto a la protección y uso de tus datos
+            </div>
             <div className="footer">
                 <button className="previous"
                 disabled={page == 0}

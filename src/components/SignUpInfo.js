@@ -3,6 +3,7 @@ import React from "react";
 function SignUpInfo({ formData, setFormData }) {
     return (
         <div className="sign-up-container">
+            <div className="body">{PageDisplay()}</div>
             <label>Crea tu usuario</label>
             <input type="text" placeholder="Write an Username" value={ formData.username } 
             onChange={(event) => setFormData({ ...formData, username: event.target.value })}/>

@@ -6,18 +6,14 @@ import SignUpInfo from "./components/SignUpInfo";
 import SuccessfulRegistration from "./components/SuccessfulRegistration";
 
 class App extends Component {
-  checked?: boolean;
+    checked?: boolean;
+
   render() {
+    
     return (
       <div className="app">
         <main className="app-content">
-            <div className="wizard">
-                    <p className='test'>Whell Hub Test Frontend =S</p>
-                    <img className="logo" src={ image } alt="logo"/>
-                    <input className="checkbox" type="checkbox" checked={this.checked} name="privacy"/>
-                    Para continuar, acepta los términos y condiciones con respecto a la protección y uso de tus datos
-                    <button className="next1">Next</button>
-            </div>
+            <div className="wizard"></div>
         </main>
       </div>
     )
@@ -25,3 +21,7 @@ class App extends Component {
 }
 
 export default App;
+function setIsChecked(arg0: boolean) {
+    throw new Error('Function not implemented.');
+}
+
