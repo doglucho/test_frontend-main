@@ -6,6 +6,7 @@ function SuccessfulRegistration() {
         <><div className="body">{PageDisplay()}</div>
         <div>
         <img src={ image } alt="success logo"/>
+        <p>The data have been recorded correctly</p>
         </div></>   
     )
 }

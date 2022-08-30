@@ -6,20 +6,40 @@ import SuccessfulRegistration from "./SuccessfulRegistration";
 
 function Form() {
 
+    // const [user, changeUser] = useState({field: '', valid: null})
+    // const [password, changePassword] = useState({field: '', valid: null})
+    // const [confirmPassword, changeConfirmPassword] = useState({field: '', valid: null})
+    // const [hint, changeHint] = useState({field: '', valid: null})
+
+    const RegExp = {
+        username: /^[a-zA-Z0-9\_\-]{4,16}$/,
+        password: /^.{8,24}$/,
+        hint: /^[a-zA-ZÀ-ÿ\s]{1,60}$/
+    }
+
+    const onChangePrivacy = (e) => {
+        setFormData(e.target.checked)
+    }
+
+    const onChange = (e) => {
+        e.preventDefault()
+    }
+
     const [page, setPage] = useState(0)
 
     const [formData, setFormData] = useState({
-        username: "",
-        password: "",
-        confirmPassword: "",
-        hint: "",
+        username: '',
+        password: '',
+        confirmPassword: '',
+        hint: '',
+        privacy: false
     })
 
     const FormTitles = ["Sign Up", "Successful Registration"]
 
     const PageDisplay = () => {
         if(page === 0) {
-            return <SignUpInfo formData={formData} setFormData={setFormData} />
+            return <SignUpInfo formData={formData} setFormData={setFormData} onSubmit={onSubmit}/>
         } else if(page === 1) {
             return <SuccessfulRegistration />
         }
@@ -35,7 +55,7 @@ function Form() {
             <div className="body">{PageDisplay()}
                 <p className='test' />Whell Hub Test Frontend =S
                     <img className="logo" src={ image } alt="logo"/>
-                    <input className="checkbox" type="checkbox" name="privacy"/>
+                    <input className="checkbox" type="checkbox" name="privacy" id="privacy" checked={privacy} onChange={onChangePrivacy}/>
                     Para continuar, acepta los términos y condiciones con respecto a la protección y uso de tus datos
             </div>
             <div className="footer">
